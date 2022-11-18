@@ -5869,7 +5869,7 @@ gatsby-plugin-netlify-cms@^6.0.0:
     mini-css-extract-plugin "1.6.2"
     netlify-identity-widget "^1.9.2"
 
-gatsby-plugin-netlify@^5.0.0:
+gatsby-plugin-netlify@^5.0.1:
   version "5.0.1"
   resolved "https://registry.npmjs.org/gatsby-plugin-netlify/-/gatsby-plugin-netlify-5.0.1.tgz#3e7de3fcaf712e05e8de8b8de4753e1c79e538ff"
   integrity sha512-siy/zX45fIEtfCApH3QkXG0u3mS0y/bf/J2mDMFOrfvhiyB35YDJfaWoRvon+UwJM4dYcMJY17sAnBaBfOQ9GA==
