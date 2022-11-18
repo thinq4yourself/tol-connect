@@ -19,7 +19,7 @@ const handler = async function (event, context, callback) {
     console.log("challenge", challenge);
     console.log("verify_token", verify_token);
     if (mode === "subscribe" && challenge) {
-      const token = verify_token === (process.env.FACEBOOK_EVENTS_WEBHOOK_TOKEN || "hgiuygi6tu6ti7uyfgiukygkuygo78");
+      const token = verify_token === process.env.FACEBOOK_EVENTS_WEBHOOK_TOKEN;
       errorMessage = "Your token did not match";
       if (token) {
         return {
