@@ -42,12 +42,12 @@ const handler = async function (event, context, callback) {
       return {
         statusCode: 500,
         // Could be a custom message or object i.e. JSON.stringify(err)
-        body: JSON.stringify({ mode, challenge, error: message }),
+        body: JSON.stringify({ challenge, mode, error: message }),
       }
     }
-    console.log(501, message);
+    console.log(500, message);
     return {
-      statusCode: 501,
+      statusCode: 500,
       // Could be a custom message or object i.e. JSON.stringify(err)
       body: JSON.stringify({ error: message }),
     }
@@ -64,8 +64,8 @@ const handler = async function (event, context, callback) {
       const { field, value } = changes[0]
       const { from, post=true, link, photo, item, published, is_hidden, edited_time } = value
 
-      if (post) {
-        const endpointUrl = process.env.ZAPIER_WEBHOOK_URL || "https://hooks.zapier.com/hooks/catch/12597535/bpqns9a/";
+      if (!!post) {
+        const endpointUrl = process.env.EVENTS_WEBHOOK_URL;
         console.log("Post received and being sent...")
         // const { status_type, is_published, permalink_url, updated_time, id: postId } = post
         // const { name, id: fromId } = from
